@@ -23,7 +23,7 @@ func InitDB(dbname string) {
 			Username:    "root",
 			Password:    "swzhang3",
 			MaxIdleCons: 2,
-			MaxOpenCons: 10,
+			MaxOpenCons: 100,
 		}
 		DB = GormMysqlByConfig(conf)
 		if DB == nil {
