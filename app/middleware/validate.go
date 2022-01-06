@@ -12,7 +12,7 @@ func Validate()gin.HandlerFunc {
 		for k,v :=range context.Request.Header {
 			fmt.Println(k,v)
 		}
-		if  context.Request.Header.Get("User-Agent") != "okhttp/3.14.9"   {
+		if  context.Request.Header.Get("User-Agent") != "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Safari/605.1.15"   {
 			context.JSON(401,gin.H{
 				"code": 1,
 				"message": "Unauthorized",

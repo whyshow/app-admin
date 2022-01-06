@@ -1,12 +1,14 @@
 package api
 
 import (
+	"app-admin/app/global"
+	"app-admin/app/model/common/response"
+	"app-admin/app/model/system"
 	"github.com/gin-gonic/gin"
 )
 
 func TestApi(c* gin.Context)  {
-	c.JSON(200, gin.H{
-		"code": 0,
-		"message": "TestApi",
-	})
+	var appUsers []system.AppUsers
+	global.MySql().Find(&appUsers)
+	response.OkWithDetailed(&appUsers,"操作成功",c)
 }
