@@ -21,8 +21,8 @@ func InitDB(dbname string) {
 			Port:        "3306",
 			Dbname:      "app_admin",
 			Username:    "root",
-			Password:    "swzhang3",
-			MaxIdleCons: 2,
+			Password:    "sw123456",
+			MaxIdleCons: 10,
 			MaxOpenCons: 100,
 		}
 		DB = GormMysqlByConfig(conf)

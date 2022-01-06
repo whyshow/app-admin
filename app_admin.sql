@@ -11,7 +11,7 @@
  Target Server Version : 50728
  File Encoding         : 65001
 
- Date: 06/01/2022 07:16:25
+ Date: 06/01/2022 22:09:13
 */
 
 SET NAMES utf8mb4;
@@ -36,6 +36,13 @@ CREATE TABLE `app_pay` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
+-- Records of app_pay
+-- ----------------------------
+BEGIN;
+INSERT INTO `app_pay` VALUES (100001, 1000001, '2022-01-04 22:52:22.296331', NULL, NULL, NULL, NULL, NULL, 'pay');
+COMMIT;
+
+-- ----------------------------
 -- Table structure for app_users
 -- ----------------------------
 DROP TABLE IF EXISTS `app_users`;
@@ -54,6 +61,14 @@ CREATE TABLE `app_users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
+-- Records of app_users
+-- ----------------------------
+BEGIN;
+INSERT INTO `app_users` VALUES (100000, '帅威', '123456', '13151289178', '2022-01-04 22:07:20.125690', NULL, 'myb_android', NULL, 1);
+INSERT INTO `app_users` VALUES (1000001, 'sw', 'qqq', '13151289178', '2022-01-04 22:08:35.356836', NULL, 'hmy_android', NULL, 1);
+COMMIT;
+
+-- ----------------------------
 -- Table structure for app_vip
 -- ----------------------------
 DROP TABLE IF EXISTS `app_vip`;
@@ -65,5 +80,11 @@ CREATE TABLE `app_vip` (
   PRIMARY KEY (`users_id`),
   UNIQUE KEY `indexVIP` (`users_id`) USING HASH COMMENT 'VIP索引'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of app_vip
+-- ----------------------------
+BEGIN;
+COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;

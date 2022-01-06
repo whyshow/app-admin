@@ -12,8 +12,7 @@ func TestApi(c* gin.Context)  {
 	var appUsers []system.AppUsers
 	err := global.MySql().Find(&appUsers).Error
 	if err == nil {
-		//response.OkWithDetailed(&appUsers,"操作成功",c)
-		response.Ok(c)
+		response.OkWithDetailed(&appUsers,"操作成功",c)
 	}else {
 		response.FailWithDetailed(&appUsers,"操作失败",c)
 		fmt.Println("操作失败:" +err.Error())
