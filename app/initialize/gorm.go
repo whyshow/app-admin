@@ -1,7 +1,7 @@
 package initialize
 
 import (
-	"app-admin/app/config"
+	"app-admin/app/model/config"
 	"fmt"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
@@ -21,7 +21,7 @@ func InitDB(dbname string) {
 			Port:        "3306",
 			Dbname:      "app_admin",
 			Username:    "root",
-			Password:    "sw123456",
+			Password:    "swzhang3",
 			MaxIdleCons: 10,
 			MaxOpenCons: 100,
 		}
