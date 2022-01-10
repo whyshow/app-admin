@@ -77,7 +77,7 @@ func LogMiddleware() gin.HandlerFunc {
 		statusCode := c.Writer.Status()
 		//请求ip
 		clientIP := c.ClientIP()
-		LOGGER.Fatalf("状态码:%3d|等待时间:%13v|请求IP:%15s|访问地址 %s|请求方式:%s",
+		LOGGER.Infof("状态码:%3d|等待时间:%13v|请求IP:%15s|访问地址 %s|请求方式:%s",
 			statusCode,
 			latencyTime,
 			clientIP,

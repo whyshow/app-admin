@@ -17,11 +17,11 @@ func InitDB(dbname string) {
 	switch dbname {
 	case "mysql":
 		conf := config.Mysql{
-			Path:        "127.0.0.1",
-			Port:        "3306",
-			Dbname:      "app_admin",
-			Username:    "root",
-			Password:    "swzhang3",
+			Path:        CONF.Databases.Url,
+			Port:        CONF.Databases.Port,
+			Dbname:      CONF.Databases.Databases,
+			Username:    CONF.Databases.Username,
+			Password:    CONF.Databases.Password,
 			MaxIdleCons: 10,
 			MaxOpenCons: 100,
 		}
