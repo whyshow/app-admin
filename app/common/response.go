@@ -1,4 +1,4 @@
-package response
+package common
 
 import (
 	"github.com/gin-gonic/gin"
@@ -52,4 +52,3 @@ func FailWithMessage(message string, c *gin.Context) {
 func FailWithDetailed(data interface{}, message string, c *gin.Context) {
 	Result(ERROR, data, message, c)
 }
-

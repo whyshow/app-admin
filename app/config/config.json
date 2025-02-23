@@ -4,10 +4,10 @@
     "mode": "release"
   },
   "databases": {
-    "databases": "app_admin",
+    "name": "app_admin",
     "url": "127.0.0.1",
     "port": "3306",
-    "username": "root",
+    "username": "swzhang3",
     "password": "swzhang3"
   }
 }

@@ -1,6 +1,10 @@
-package system
+package user
 
-import "time"
+import (
+	"app-admin/app/initialize"
+	"fmt"
+	"time"
+)
 
 type AppUsers struct {
 	UsersId       int64     ` gorm:"primaryKey" json:"usersId"`
@@ -12,4 +16,12 @@ type AppUsers struct {
 	UsersClient   string    `json:"usersClient"`
 	UsersSource   string    `json:"usersSource"`
 	UserClose     int       `json:"userClose"`
+}
+
+// 查询单个用户
+func GetUserByID(id uint) (*AppUsers, error) {
+	var user AppUsers
+	result := initialize.DB.First(&user, id)
+	fmt.Println(&user)
+	return &user, result.Error
 }

@@ -13,7 +13,7 @@ var options []Option
 func Init(opts ...Option) *gin.Engine {
 	r := gin.New()
 	r.Use(middleware.LogMiddleware()) // 日志
-	r.Use(middleware.JWT()) // 鉴权
+	// r.Use(middleware.JWT())            // 鉴权
 	options = append(options, opts...) // 注册app的路由配置
 	for _, opt := range options {
 		opt(r)
